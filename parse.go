@@ -20,7 +20,7 @@ func parseNameArgThread(line string) (name string, arg string, c int, err error)
 	arr := re.FindStringSubmatch(line)
 
 	// we expect 4 columns
-	if len(arr) != 4 {``
+	if len(arr) != 4 {
 		return "", "", 0, errors.New("Can't parse benchmark result")
 	}
 
