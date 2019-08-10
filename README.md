@@ -14,21 +14,27 @@ go install
 ```
 
 ## Naming convention
+
 In order for `benchgraph` to work a coder is required to follow the **naming convention** when coding benchmark functions:
+
 ```go
 // Naming convention
-func Benchmark[Function_name]_[Function_argument](b *testing.B){
-...
+func Benchmark[Function_name](b *testing.B){
+    b.run("[Function_argument]",...
 }
 ```
+
 For example, if we take one line from the benchmark output,
+
 ```bash
 BenchmarkF1_F-4       	30000000	        53.7 ns/op
 ```
+
 it will be parsed and plotted on graph as function `F1(F)=53.7`, taking `F` as an argument and `53.7` as function result. 
 In short, X-axis shows function arguments, while Y-axis shows function execution time in ns/op.
 
 ## Usage
+
 The output of benchmark is piped through `benchgraph`:
 
 ```bash
