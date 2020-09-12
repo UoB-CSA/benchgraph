@@ -7,7 +7,7 @@ In Golang we can analyze algorithm efficiency by writing benchmark functions and
 ## Installation
 
 ```bash
-go get github.com/ChrisGora/benchgraph
+go get github.com/UoB-CSA/benchgraph
 ```
 
 ## Naming convention
